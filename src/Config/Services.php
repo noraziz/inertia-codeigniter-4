@@ -1,10 +1,10 @@
 <?php
 
-namespace Inertia;
+namespace Inertia\Config;
 
-use CodeIgniter\Config\Services as BaseServices;
+use CodeIgniter\Config\BaseService;
 
-class Services extends BaseServices
+class Services extends BaseService
 {
     public static function inertia($getShared = true)
     {
@@ -12,6 +12,6 @@ class Services extends BaseServices
             return static::getSharedInstance('inertia');
         }
 
-        return new Factory;
+        return new \Inertia\Factory;
     }
 }
